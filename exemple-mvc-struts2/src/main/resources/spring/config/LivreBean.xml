@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="livreAction" class="ma.publicom.action.LivreAction">
+		<property name="livreBo" ref="livreBo"></property>
+	</bean>
+	<bean id="livreBo" class="ma.publicom.bo.impl.LivreBoImpl">
+		<property name="livreDAO" ref="livreDAO"></property>
+	</bean>
+	<bean id="livreDAO" class="ma.publicom.dao.impl.LivreDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

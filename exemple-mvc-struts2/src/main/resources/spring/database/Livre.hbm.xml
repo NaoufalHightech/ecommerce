@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="ma.publicom.model.Livre" table="livre">
+
+		<id name="idLivre" type="java.lang.Long">
+			<column name="livre_id" />
+			<generator class="identity" />
+		</id>
+
+		<property name="titre" type="string">
+			<column name="titre" length="45" not-null="true" />
+		</property>
+
+		<property name="nomAuteur" type="string">
+			<column name="auteur" length="255" not-null="true" />
+		</property>
+		<property name="prix" type="string">
+			<column name="prix" length="19" not-null="true" />
+		</property>
+		<property name="datePublication" type="timestamp">
+			<column name="date_publication" length="19" not-null="true" />
+		</property>
+
+	</class>
+</hibernate-mapping>
